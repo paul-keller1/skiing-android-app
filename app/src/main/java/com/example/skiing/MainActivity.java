@@ -1,5 +1,6 @@
 package com.example.skiing;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -39,44 +40,44 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     private void startLoading() {
-        // Disable the button and show the progress bar
-        loadingIcon.setVisibility(View.VISIBLE);
         loadingIcon.setProgress(0);
 
-        // Use a background thread to simulate work
         new Thread(new Runnable() {
             @Override
             public void run() {
-                // This loop simulates the progress from 1 to 100
-                int divide = 10;
-                for (int i = 1; i <= 100*divide; i++) {
-                    final int progress = i;
+                try {
+                    int divide = 10;
+                    for (int i = 1; i <= 100; i++) {
+                        final int progress = i;
 
-                    // Post updates to the UI thread using the handler
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                loadingIcon.setProgress(progress);
+                            }
+                        });
+
+                        Thread.sleep(3);
+                    }
+
                     handler.post(new Runnable() {
                         @Override
                         public void run() {
-                            loadingIcon.setProgress(progress/divide);
+                            Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+                            startActivity(intent);
+
+                            finish();
                         }
                     });
 
-                    try {
-                        // This delay simulates work being done, like in the 'delay(100)'
-                        Thread.sleep(30/divide); // 30ms * 100 = 3 seconds total
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
-
-                // After the loop finishes, re-enable the button on the UI thread
-
             }
-        }).start(); // Start the new thread
+        }).start();
     }
-
-
-
 
 
 }
