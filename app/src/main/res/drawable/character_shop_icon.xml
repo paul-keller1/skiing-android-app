@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- Background rounded rect -->
+    <path
+        android:fillColor="#4A90E2"
+        android:pathData="M20,0 H180 a20,20 0 0 1 20,20 v160 a20,20 0 0 1 -20,20 H20 a20,20 0 0 1 -20,-20 V20 a20,20 0 0 1 20,-20 z" />
+
+    <!-- Shop awning / header (rectangle) -->
+    <path
+        android:fillColor="#795548"
+        android:pathData="M20,110 h160 v20 h-160 z" />
+
+    <!-- Shop storefront base (rounded rect) -->
+    <path
+        android:fillColor="#8BC34A"
+        android:pathData="M30,120 h140 a10,10 0 0 1 10,10 v40 a10,10 0 0 1 -10,10 H30 a10,10 0 0 1 -10,-10 v-40 a10,10 0 0 1 10,-10 z" />
+
+    <!-- Character 1 - Tall (rounded rect + circle head) -->
+    <!-- body -->
+    <path
+        android:fillColor="#FF5722"
+        android:pathData="M50,70 h20 a5,5 0 0 1 5,5 v30 a5,5 0 0 1 -5,5 h-20 a5,5 0 0 1 -5,-5 v-30 a5,5 0 0 1 5,-5 z" />
+    <!-- head -->
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M60,35 a15,15 0 1 0 0,30 a15,15 0 1 0 0,-30 z" />
+
+    <!-- Character 2 - Short (rounded rect + circle head) -->
+    <!-- body -->
+    <path
+        android:fillColor="#9C27B0"
+        android:pathData="M90,90 h20 a5,5 0 0 1 5,5 v10 a5,5 0 0 1 -5,5 h-20 a5,5 0 0 1 -5,-5 v-10 a5,5 0 0 1 5,-5 z" />
+    <!-- head -->
+    <path
+        android:fillColor="#03A9F4"
+        android:pathData="M100,65 a10,10 0 1 0 0,20 a10,10 0 1 0 0,-20 z" />
+
+    <!-- Character 3 - Medium (rounded rect + circle head) -->
+    <!-- body -->
+    <path
+        android:fillColor="#009688"
+        android:pathData="M130,80 h20 a5,5 0 0 1 5,5 v20 a5,5 0 0 1 -5,5 h-20 a5,5 0 0 1 -5,-5 v-20 a5,5 0 0 1 5,-5 z" />
+    <!-- head -->
+    <path
+        android:fillColor="#FF9800"
+        android:pathData="M140,48 a12,12 0 1 0 0,24 a12,12 0 1 0 0,-24 z" />
+
+</vector>
