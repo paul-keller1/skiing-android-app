@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Skiing</string>
+    <string name="menu_name">Skiing Game Menu</string>
+    <string name="start_game_button">Start Game</string>
+    <string name="character_shop_activity">Character Shop Activity</string>
+    <string name="game_activity">Game Activity</string>
 </resources>

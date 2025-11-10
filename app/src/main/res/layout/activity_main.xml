@@ -7,13 +7,46 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_gradient_blue_white"
+        >
+        <ImageView
+            android:id="@+id/start_icon"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:src="@drawable/ic_skiing_loading_screen"
+            android:layout_centerInParent="true"
+            android:padding="50dp"
+        />
+
+
+        <ProgressBar
+            android:id="@+id/loading_icon"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/start_icon"
+            android:layout_centerInParent="true"
+            android:max="100"
+            android:progress="0"
+            android:progressTint="#4080D0"
+        />
+
+
+
+
+
+
+        <!-- Add an ImageView for the skier icon -->
+
+
+
+    </RelativeLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
